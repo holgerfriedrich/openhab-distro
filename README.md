@@ -1,3 +1,5 @@
+test
+
 # openHAB Distribution
 
 [![GitHub Actions Build Status](https://github.com/openhab/openhab-distro/actions/workflows/ci-build.yml/badge.svg?branch=main)](https://github.com/openhab/openhab-distro/actions/workflows/ci-build.yml)
