@@ -97,7 +97,6 @@ feature.openhab-model-runtime-all: \
 	org.osgi.service.http.port=8080,\
 	osgi.console=,\
 	osgi.console.enable.builtin=false,\
-	org.apache.cxf.osgi.http.transport.disable=true,\
 	org.ops4j.pax.logging.DefaultServiceLog.level=ERROR,\
 	openhab.servicecfg=${.}/runtime/services.cfg,\
 	openhab.runtime=${.}/runtime/runtime,\
