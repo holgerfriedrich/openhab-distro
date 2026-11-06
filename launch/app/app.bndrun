@@ -1,8 +1,14 @@
 -resolve.effective: active
 
--standalone: \
-	target/index.xml;name="self",\
-	target/jaxb3-compat-index.xml;name="jaxb3-compat"
+# swagger-core-jakarta has a mandatory import of jakarta.xml.bind.annotation [3.0,4). The Maven dependencies
+# provide JAXB 4.0 only, and unlike a Karaf wrap: bnd cannot widen the import range, so the JAXB 3.0 API is
+# provided by this repository in addition to the implicit repository of the Maven dependencies.
+-plugin.jaxb3compat: \
+	aQute.bnd.repository.maven.pom.provider.BndPomRepository;\
+		name=jaxb3-compat;\
+		releaseUrl=https://repo.maven.apache.org/maven2/;\
+		revision=jakarta.xml.bind:jakarta.xml.bind-api:3.0.0;\
+		transitive=false
 
 feature.logging: \
 	bnd.identity;id='org.ops4j.pax.logging.pax-logging-api',\
